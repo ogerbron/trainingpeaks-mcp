@@ -266,7 +266,7 @@ TOOLS = [
 =======
                 "feeling": {"type": "integer", "description": "0-10"},
                 "rpe": {"type": "integer", "description": "1-10"},
-                "isHidden": {
+                "is_hidden": {
                     "type": "boolean",
                     "description": "Whether to hide the workout",
                     "default": False,
@@ -1085,7 +1085,7 @@ async def _h_create_workout(args):
         structured_workout=args.get("structured_workout"),
         subtype_id=args.get("subtype_id"), tags=args.get("tags"),
         feeling=args.get("feeling"), rpe=args.get("rpe"),
-        is_hidden=args.get("isHidden", False),
+        is_hidden=args.get("is_hidden", False),
     )
 
 @_handler("tp_update_workout")
@@ -1100,7 +1100,7 @@ async def _h_update_workout(args):
         coach_comment=args.get("coach_comment"), feeling=args.get("feeling"),
         rpe=args.get("rpe"), structure=args.get("structure"),
         structured_workout=args.get("structured_workout"),
-        is_hidden=args.get("isHidden", False),
+        is_hidden=args.get("is_hidden", False),
     )
 
 @_handler("tp_delete_workout")
