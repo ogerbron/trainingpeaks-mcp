@@ -75,7 +75,7 @@ class TestCreateWorkoutInput:
         )
         assert result.sport == "Run"
         assert result.duration_minutes == 60
-        assert result.is_hidden is False
+        assert result.is_hidden is None
 
     def test_accepts_hidden_flag(self):
         result = CreateWorkoutInput(
@@ -200,7 +200,7 @@ class TestUpdateWorkoutInput:
         result = UpdateWorkoutInput(workout_id="123", date="2026-04-14")
         assert result.date is not None
         assert result.date.isoformat() == "2026-04-14"
-        assert result.is_hidden is False
+        assert result.is_hidden is None
 
     def test_accepts_hidden_flag(self):
         result = UpdateWorkoutInput(workout_id="123", is_hidden=True)
