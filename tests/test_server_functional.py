@@ -131,7 +131,6 @@ class TestListTools:
         assert "structure" in props
         assert "structured_workout" in props
         assert "is_hidden" in props
-        assert props["is_hidden"]["default"] is False
 
     @pytest.mark.asyncio
     async def test_workout_tools_schema_advertises_datetime_dates(self):

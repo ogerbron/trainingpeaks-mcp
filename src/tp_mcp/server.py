@@ -268,8 +268,7 @@ TOOLS = [
                 "rpe": {"type": "integer", "description": "1-10"},
                 "is_hidden": {
                     "type": "boolean",
-                    "description": "Whether to hide the workout",
-                    "default": False,
+                    "description": "Whether to hide the workout"
                 },
 >>>>>>> 7b44dca (feat: Add isHidden option to create/update a workout and hide it for athlete (coach mode))
                 "structure": {
@@ -1100,7 +1099,7 @@ async def _h_update_workout(args):
         coach_comment=args.get("coach_comment"), feeling=args.get("feeling"),
         rpe=args.get("rpe"), structure=args.get("structure"),
         structured_workout=args.get("structured_workout"),
-        is_hidden=args.get("is_hidden", False),
+        is_hidden=args.get("is_hidden"),
     )
 
 @_handler("tp_delete_workout")
